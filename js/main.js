@@ -18,7 +18,11 @@ const links = [
   {
     label: "week 5",
     url: "/week5/index.html",
-  }
+  },
+  {
+    label: "Todo-List",
+    url: "/Todo/todo.html",
+  },
 ];
  
 let linksList = document.getElementById("linksList");
