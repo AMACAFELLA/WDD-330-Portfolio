@@ -1,11 +1,11 @@
 const links = [
   {
     label: "Week 1",
-    url: "https://amacafella.github.io/WDD-330-Portfolio/week1/index.html",
+    url: "/week1/index.html",
   },
   {
     label: "Week 2",
-    url: "https://amacafella.github.io/WDD-330-Portfolio/week2/index.html",
+    url: "/week2/index.html",
   },
   {
     label: "week 3",
