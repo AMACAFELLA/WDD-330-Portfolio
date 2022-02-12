@@ -5,19 +5,19 @@ const links = [
   },
   {
     label: "Week2 notes",
-    url: "WDD-330-Portfolio/week2/index.html"
+    url: "./week2/index.html"
   },
   {
     label: "Week3 notes",
-    url: "/week3/index.html"
+    url: "./week3/index.html"
   },
   {
     label: "Week4 notes",
-    url: "/week4/index.html"
+    url: "./week4/index.html"
   },
   {
     label: "Week5 notes",
-    url: "/week5/index.html"
+    url: "./week5/index.html"
   }
 
 ]
