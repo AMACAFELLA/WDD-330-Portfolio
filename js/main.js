@@ -1,34 +1,31 @@
 const links = [
   {
-    label: "Week1 notes",
-    url: "week1/index.html",
-    label: "Week2 notes",
-    url: "./week2/index.html",
-    label: "Week3 notes",
-    url: "/week3/index.html",
-    label: "Week4 notes",
-    url: "/week4/index.html",
-    label: "Week5 notes",
-    url: "/week5/index.html"
+    title: "Week 1",
+    url: "/week1/index.html",
   },
   {
-    label: "Week1 notes",
-    url: "week1/index.html",
-    label: "Week2 notes",
-    url: "./week2/index.html",
-    label: "Week3 notes",
+    title: "Week 2",
+    url: "/week2/index.html",
+  },
+  {
+    title: "week 3",
     url: "/week3/index.html",
-    label: "Week4 notes",
+  },
+  {
+    title: "week 4",
     url: "/week4/index.html",
-    label: "Week5 notes",
-    url: "/week5/index.html"
-  }];
+  },
+  {
+    title: "week 5",
+    url: "/week5/index.html",
+  }
+];
 let linksList = document.getElementById("linksList");
-//make each label and url into a link and add it to the list
+//label and url into a link and add it to the list
 for (let i = 0; i < links.length; i++) {
   let link = document.createElement("a");
   link.href = links[i].url;
-  link.innerHTML = links[i].label;
+  link.innerHTML = links[i].title;
   linksList.appendChild(link);
 }
 
