@@ -1,7 +1,7 @@
 const links = [
   {
     label: "Week 1",
-    url: "/week1/",
+    url: "https://amacafella.github.io/WDD-330-Portfolio/week1/",
   },
   {
     label: "Week 2",
