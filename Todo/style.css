@@ -1,0 +1,151 @@
+/* style layout from: https://www.w3schools.com/howto/howto_js_todolist.asp */
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+  }
+  
+  /*Margins and padding removed from list*/
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  /*h1 centered and styled*/
+  h1{
+    text-align: center;
+    background: #f44336;
+    color: #fff;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 0;
+  }
+  /* Style for the list items */
+  ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    list-style: none;
+    
+  }
+  /* Darker hover on list*/
+  ul li:hover {
+    background: #ddd;
+  }
+  
+  /* When clicked on, add a background color and strike out text */
+  ul li.checked {
+    background: rgb(255, 85, 85);
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  /* Add a "checked" mark when clicked on */
+  ul li.checked::before {
+    content: 'X';
+    position: absolute;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    margin: 2px;
+    left: 16px;
+    height: 15px;
+    width: 7px;
+  }
+  
+  /* Style the close button */
+  .delete {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #000000;
+    color: #fff;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .delete:hover {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  /* Add-section style */
+  .add-section {
+    margin-top: 10%;
+    color: white;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  
+  /* Input Style */
+  input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    border: 1px solid #000000;
+  
+  }
+  
+  /* Add button Style */
+  .add-button {
+    padding: 10px;
+    width: 25%;
+    background: #000000;
+    color: rgb(255, 255, 255);
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+  }
+  
+  .add-button:hover {
+    background-color: rgb(255, 77, 77);
+  }
+  /* items for count and selected buttons*/
+  .items-underneath{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 50px;
+    width: 50%;
+    background-color: #f9f9f9;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  /* buttons styled */
+  .items-underneath button{
+    background-color: #f9f9f9;
+    border: none;
+    color: #2F4F4F;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+  }
+  /* button styled */
+  .items-underneath button:hover{
+    background-color: #bbb;
+  }
+  /* text styled */
+  .items-underneath .numberOfList{
+    margin-left: 40px;
+    font: 1em sans-serif;
+    margin-top: 15px;
+  }
