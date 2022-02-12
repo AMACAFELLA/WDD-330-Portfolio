@@ -1,27 +1,27 @@
 const links = [
   {
     label: "Week 1",
-    url: "/week1/index.html",
+    url: "week1/index.html",
   },
   {
     label: "Week 2",
-    url: "/week2/index.html",
+    url: "week2/index.html",
   },
   {
     label: "week 3",
-    url: "/week3/index.html",
+    url: "week3/index.html",
   },
   {
     label: "week 4",
-    url: "/week4/index.html",
+    url: "week4/index.html",
   },
   {
     label: "week 5",
-    url: "/week5/index.html",
+    url: "week5/index.html",
   },
   {
     label: "Todo-List",
-    url: "/Todo/todo.html",
+    url: "Todo/todo.html",
   },
 ];
  
