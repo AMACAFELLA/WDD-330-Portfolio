@@ -22,7 +22,7 @@ const links = [
   {
     label: "Todo-List",
     url: "Todo/todo.html",
-  },
+  }
 ];
  
 let linksList = document.getElementById("linksList");
