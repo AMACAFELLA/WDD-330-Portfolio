@@ -50,7 +50,7 @@ const links = [
   {
     label: "week 13",
     url: "week11/index.html",
-  }
+  },
 ];
  
 let linksList = document.getElementById("linksList");
