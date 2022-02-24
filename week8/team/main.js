@@ -58,7 +58,6 @@ function previousPage(data){
     })
 }
 
-
 function showExtraInfo(){
     const extraInfo = document.querySelectorAll('.extraInfo');
     extraInfo.forEach(info => {
