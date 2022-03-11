@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Baaad Movies - Movies so bad it's good</title>
+</head>
+<body>
+    <header>
+        <div class="logo1">
+            <img src="1.png" alt="Baaad Movies">
+        </div>
+        <div class="logo1">
+            <img class="logo2" src="2.png" alt="Baaad Movies">
+        </div>
+        <!-- create a watch later button -->
+        <div>
+            <button class="watch-later">Watch later</button>
+        </div>
+        <form  id="form">
+            <input type="text" placeholder="Search" id="search" class="search">
+            <input type="submit" value="Search">
+        </form>
+    </header>
+    <div class="home-logo">
+        <img src="1.png" alt="logo">
+    </div>
+    <div class="glass-morphism">
+        <h1>Welcome</h1>
+        <p>If you're here then their must be there's a lack of good movies. If you're looking for something to laugh at or question who funded theses movies yuo'vw come to the right place.</p>
+        <button class="button">Recommend me a movie</button>
+    </div>
+    
+    <script>
+        //if the user clicks the button, it will take them to the index.html page
+        document.querySelector(".button").addEventListener("click", function(){
+            window.location.href = "index.html";
+        });
+        
+    </script>
+</body>
+</html>

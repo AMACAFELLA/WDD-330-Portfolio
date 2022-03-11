@@ -1,0 +1,48 @@
+<!Doctype html>
+<head>
+    <title>Let's make this work!!</title>
+</head>
+
+<body>
+    <style>
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+       
+        input {
+            width: 300px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+       
+        button {
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+    </style>
+
+    <form action="quakes.html">
+        <label><input id="radius" type="text" placeholder="Insert the desired radius"></label>
+        <br>
+        <input type="button" name="seeQuakes" value="Submit" onclick="saveRadius()">
+        <a href="quakes.html">See Quakes</a>
+    </form>
+    <script>
+function saveRadius(){
+    let radius = document.querySelector("#radius").value;
+    localStorage.setItem("radius", radius);
+}
+
+    </script>
+</body>
