@@ -20,22 +20,24 @@
             <button class="watch-later">Watch later</button>
         </div>
         <form  id="form">
+            <button type="button" class="watchlater">Watch Later</button>
             <input type="text" placeholder="Search" id="search" class="search">
             <input type="submit" value="Search">
         </form>
     </header>
-    <div class="home-logo">
-        <img src="1.png" alt="logo">
-    </div>
-    <div class="glass-morphism">
-        <h1>Welcome</h1>
-        <p>If you're here then their must be there's a lack of good movies. If you're looking for something to laugh at or question who funded theses movies yuo'vw come to the right place.</p>
-        <button class="button">Recommend me a movie</button>
-    </div>
-    
+    <section class="content">
+        <main class="card">
+          <div class="welcome">
+            <h1 class="title">Welcome!</h1>
+            <p class="description">If you're here then their must be there's a lack of good movies. If you're looking for something to laugh at or question who funded theses movies yuo'vw come to the right place.</p>
+            <hr class="break"/>
+            <div class="bottom-info"><a class="watch">Recommend Me a Movie</a></div>
+          </div>
+        </main>
+      </section>
     <script>
         //if the user clicks the button, it will take them to the index.html page
-        document.querySelector(".button").addEventListener("click", function(){
+        document.querySelector(".watch").addEventListener("click", function(){
             window.location.href = "index.html";
         });
         

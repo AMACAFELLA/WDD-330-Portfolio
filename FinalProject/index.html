@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Baaad Movies - Bad movie recommendation</title>
 </head>
 <body>
@@ -16,8 +17,9 @@
             <img class="logo2" src="2.png" alt="Baaad Movies">
         </div>
         <form  id="form">
+            <button type="button" class="watchlater">Watch Later</button>
             <input type="text" placeholder="Search" id="search" class="search">
-            <input type="submit" value="Search">
+            <input type="submit" value="Search" class="search_input">
         </form>
     </header>
     <main id="main">
@@ -26,34 +28,9 @@
 
         <div class="movie-info">
             <h3>Movie title</h3>
-            <span class="green">5</span>
-        </div>
-
-        <div class="overview">
-            <h3>overview</h3>
-            lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.
-        </div>
-        </div>
-
-        <div class="movie">
-            <img src="https://picsum.photos/200/300" alt="logo">
-
-        <div class="movie-info">
-            <h2>Movie title</h2>
-            <span class="green">5</span>
-        </div>
-
-        <div class="overview">
-            <h3>overview</h3>
-            lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaerat.
-        </div>
-        </div>
-
-        <div class="movie">
-            <img src="https://picsum.photos/200/300" alt="logo">
-
-        <div class="movie-info">
-            <h2>Movie title</h2>
+            //create a heart shape that will be filled in if the movie is in the watch later list
+            <div class="heart">
+            </div>
             <span class="green">5</span>
         </div>
 
@@ -63,6 +40,7 @@
         </div>
         </div>
     </main>
-    <script src="main.js"></script>
+    <button class="recommendation">Recommendation</button>
+    <script src="main.js" type="module"></script>
 </body>
 </html>
