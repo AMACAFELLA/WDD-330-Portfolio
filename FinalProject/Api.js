@@ -48,13 +48,13 @@ export default class Api{
     showMovie(list[0]);
     function showNextMovie(movie){
         document.querySelector('.recommendation').addEventListener('click', () => {
-            //every time the recommendation button is clicked go to the next page of the API
+            //Every time the recommendation button is clicked go to the next page of the API
             const random = Math.floor(Math.random() * movie.length);
             showMovie(movie[random]);
             storeMovie(movie[random]);
         })
     }
-
+    //Calling all the functions
     showNextMovie(list);
     storeMovie(list[0]);
     watchLaterPage();
