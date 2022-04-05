@@ -1,63 +1,83 @@
-
 //created a local storage function that will store the movies in the local storage when the user clicks the watch later button for each movie
 export function storeMovie(movie){
     let movies;
     document.querySelector('.watchlaterBtn').addEventListener('click', () => {
-        //Logic to add one movie at a time to the local storage when the watch later button is clicked
-        if(localStorage.getItem('movies') === null){
+        //if there is no movies in the local storage, create a new array to store the movies
+        if(localStorage.getItem('movieList') === null){
             movies = [];
         }
+        //if there are movies in the local storage, get the movies from the local storage
         else{
-            movies = JSON.parse(localStorage.getItem('movies'));
+            movies = JSON.parse(localStorage.getItem('movieList'));
         }
+        //push the movie to the movies array
         movies.push(movie);
-        //Logic to set the local storage to the movies array for each movie
-        localStorage.setItem('movies', JSON.stringify(movies));
-        console.log(movies);
-        alert('movie added to watch later');
+        //store the movies in the local storage
+        localStorage.setItem('movieList', JSON.stringify(movies));
+        //alert the user that the movie has been added to the watch later list
+        alert('Movie added to watch later list');
 
     }
     )
 }
 
-
 //created a function when the user clicks on the watchlater they will be redirected to the watch later page
 export function watchLaterPage(){
     document.querySelector('.watchlater').addEventListener('click', () => {
-        window.location.href = 'watchLater.html';
-        //display the movies from the local storage
+        console.log(localStorage.getItem('movieList'));
         displayWatchLater();
-        
+        deleteMovie();
     })
 }
 
-//Created a function to display the watch later movies
+//function when page loads to display the movies from the local storage
 function displayWatchLater(){
-    let watchLater;
-    if(localStorage.getItem('movies') === null){
-        watchLater = [];
-    }
-    else{
-        watchLater = JSON.parse(localStorage.getItem('movies'));
-    }
-    const watchLaterDisplay = document.getElementsByClassName('movie');
-    watchLaterDisplay.innerHTML = '';
-    watchLater.forEach(movie => {
-        const {title, imageurl, imdbrating, synopsis} = movie;
-        const movieE1 = document.createElement('div');
-        movieE1.classList.add('movie');
-        movieE1.innerHTML = `<button class="watchlaterBtn"><i class="fa fa-heart"></i></button>
-        <img src="${imageurl? imageurl:"noImage.png"  }" alt="${title}">
-        <div class="movie-info">
-        <h3>${title}</h3>
-        <span class="${getColor(imdbrating)}">${imdbrating}</span>
-    </div>
+   //display the movies in the storeMovie function
+   main.innerHTML = '';
+   const watchLater = JSON.parse(localStorage.getItem('movieList'));
+   watchLater.forEach(movie => {
+         main.innerHTML += `
+         <div class="movie">
+            <button class="DeleteMovie"><i class="fa fa-trash fa-lg"></i></button>
+            <img src="${movie.imageurl? movie.imageurl:"noImage.png"}" alt="${movie.title}">
+            <div class="movie-info">
+                <h3>${movie.title}</h3>
+                <span class="${getColor(movie.imdbrating)}">${movie.imdbrating}</span>
+            </div>
 
-    <div class="overview">
-        <h3>synopsis</h3>
-        ${synopsis}
-    </div>`
-
-    watchLaterDisplay.appendChild(movieE1);
+            <div class="overview">
+                <h3>synopsis</h3>
+                ${movie.synopsis}
+            </div>
+        </div>`
     })
+}
+
+//created a function to delete the movie from the local storage
+function deleteMovie(){
+    const deleteMovie = document.querySelectorAll('.DeleteMovie');
+    deleteMovie.forEach(button => {
+        button.addEventListener('click', () => {
+            const movie = button.parentElement;
+            const title = movie.querySelector('h3').textContent;
+            const movies = JSON.parse(localStorage.getItem('movieList'));
+            movies.forEach((movie, index) => {
+                if(movie.title === title){
+                    movies.splice(index, 1);
+                }
+            })
+            localStorage.setItem('movieList', JSON.stringify(movies));
+            movie.remove();
+        })
+    })
+}
+
+function getColor(vote){
+    if(vote >= 4){
+        return 'green';
+    }else if(vote >= 2 && vote < 4){
+        return 'orange';
+    }else{
+        return 'red';
+    }
 }
