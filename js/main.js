@@ -44,12 +44,8 @@ const links = [
     url: "week11/index.html",
   },
   {
-    label: "week 12",
-    url: "week10/index.html",
-  },
-  {
-    label: "week 13",
-    url: "week11/index.html",
+    label: "Final Project",
+    url: "FinalProject/home.html",
   },
 ];
  
